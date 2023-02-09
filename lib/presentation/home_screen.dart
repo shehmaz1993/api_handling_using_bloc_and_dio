@@ -40,6 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
   Widget dataForListView(String id, String title){
+    print(id);
+    print(title);
     return ListTile(
       title: Text(id),
       subtitle: Text(title),
