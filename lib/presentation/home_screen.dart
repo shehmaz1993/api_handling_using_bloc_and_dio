@@ -28,10 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: state.lst.length,
                   itemBuilder: (context,index){
                     TodoClass todo= state.lst[index];
-                    return ListTile(
-                      title: Text(todo.id.toString()),
-                      subtitle: Text(todo.title.toString()),
-                    );
+                    return  dataForListView(todo.id.toString(), todo.title.toString());
 
                   },
               );
@@ -40,6 +37,12 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
       ),
+    );
+  }
+  Widget dataForListView(String id, String title){
+    return ListTile(
+      title: Text(id),
+      subtitle: Text(title),
     );
   }
 }
